@@ -1,0 +1,30 @@
+<!-- From https://www.garrickadenbuie.com/blog/xaringan-tip-logo-all-slides/ -->
+
+<style>
+.logo {
+  background-image: url(figures/gradetools-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  bottom: -1em;
+  left: 2em;
+  width: 165px;
+  height: 192px;
+  z-index: 0;
+  position: absolute;
+
+}
+</style>
+
+<script>
+document
+  .querySelectorAll(
+    '.remark-slide-content' +
+    ':not(.title-slide)' +
+    // add additional classes to exclude here, e.g.
+    // ':not(.inverse)' +
+    ':not(.hide-logo)'
+  )
+  .forEach(el => {
+    el.innerHTML += '<div class="logo"></div>';
+  });
+</script>
