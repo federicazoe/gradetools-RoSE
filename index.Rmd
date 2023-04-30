@@ -1,7 +1,7 @@
 ---
 title: <img src='figures/gradetools-logo.png' align="center" width="450px" alt="a hex shaped logo with a cat in front of a laptop sending out paper planes and a notepad with A+ on it. The logo reads gradetools"/> 
 author: "Federica Zoe Ricci, Catalina Medina, and Mine Dogucu"
-subtitle: "gradetools: a grading assistant in RStudio <br> [federicazoe.github.io/gradetools-RoSE/](federicazoe.github.io/gradetools-RoSE/)"
+subtitle: "gradetools: a grading assistant in RStudio <br> [https://federicazoe.github.io/gradetools-RoSE/](https://federicazoe.github.io/gradetools-RoSE/)"
 date: "2023-05-03"
 output:
   xaringan::moon_reader:
@@ -856,6 +856,6 @@ Questions?
 <hr>
 
 
-`r fontawesome::fa(name = "link")` <a href = "federicazoe.github.io/gradetools-RoSE/">federicazoe.github.io/gradetools-RoSE/</a>
+`r fontawesome::fa(name = "link")` <a href = "https://federicazoe.github.io/gradetools-RoSE/">https://federicazoe.github.io/gradetools-RoSE/</a>
 
 
