@@ -42,6 +42,7 @@ knitr::include_graphics("figures/catalina-medina.jpg")
 ```
 
 `r fontawesome::fa(name = "link")` <a href = "https://catalinamedina.github.io/">catalinamedina.github.io</a>
+`r fontawesome::fa(name = "github")`<a href = "http://github.com/CatalinaMedina">CatalinaMedina</a>  
 `r fontawesome::fa(name = "envelope")` <a href = "catalmm1@uci.edu">catalmm1@uci.edu</a> 
 
 ]
