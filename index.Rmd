@@ -1,7 +1,8 @@
 ---
-title: <img src='figures/gradetools-logo.png' align="center" width="450px" alt="a hex shaped logo with a cat in front of a laptop sending out paper planes and a notepad with A+ on it. The logo reads gradetools"/> 
+title: "<img src='figures/gradetools-logo.png' align='center' width='450px' alt='a hex shaped logo with a cat in front of a laptop sending out paper planes and a notepad with A+ on it. The logo reads gradetools'/> <br>
+gradetools: a grading assistant in RStudio"
 author: "Federica Zoe Ricci, Catalina Medina, and Mine Dogucu"
-subtitle: "gradetools: a grading assistant in RStudio <br> [https://federicazoe.github.io/gradetools-RoSE/](https://federicazoe.github.io/gradetools-RoSE/)"
+subtitle: "[https://federicazoe.github.io/gradetools-RoSE/](https://federicazoe.github.io/gradetools-RoSE/)"
 date: "2023-05-03"
 output:
   xaringan::moon_reader:
@@ -501,37 +502,40 @@ class: middle
 
 ---
 
-class: middle, center
+class: center
 
 ## Example assignment directories
 
+<br>
+<br>
+
 <div class="row">
   <div class="column_half_left">
-    <img src="figures/filepath-yes.png" alt="An example of a directory structure that works with gradetools. A directory with two sub-directories labeled 'final-project-CatalinaMedina' and 'final-project-federicazoe', each containing two files 'proposal.Rmd' and 'README.md'." style="width:80%">
+    <img src="figures/filepath-yes.jpg" alt="An example of a directory structure that works with gradetools. A directory with three files, each containing the student identifier in the same location and with no other difference except for the student identifier." style="width:90%">
   </div>
   <div class="column_half_right">
-    <img src="figures/filepath-no.png" alt="An example of a directory structure that does not work with gradetools. A directory with two sub-directories labeled 'final-project-CatalinaMedina' and 'final-project-federicazoe'. The first contains a file called 'README.md' and a folder called 'proposal' which contains a file called 'proposal.Rmd'. The second directory contains two files 'proposal.Rmd' and 'README.md'"  style="width:80%">
+    <img src="figures/filepath-no.jpg" alt="An example of a directory structure that does not work with gradetools. A directory with three files, each containing the student identifier in the same location, but one file has '-FINAL' before the student identifier."  style="width:90%">
   </div>
 </div>
 
 ---
 
-class: middle, center
+class: center
 
 ## Example assignment directories
 
 <div class="row">
   <div class="column_half_left">
-    <img src="figures/filepath-yes.png" alt="An example of a directory structure that works with gradetools. A directory with two sub-directories labeled 'final-project-CatalinaMedina' and 'final-project-federicazoe', each containing two files 'proposal.Rmd' and 'README.md'." style="width:80%">
+    <img src="figures/subfolders-yes.jpg" alt="An example of a directory structure that works with gradetools. A directory named 'week09' with three sub-directories labeled 'week09-mdogucu', 'week09-federicazoe' and 'week09-CatalinaMedina', each containing a file named 'quiz-09a-lin-reg.Rmd'." style="width:80%">
   </div>
   <div class="column_half_right">
-    <img src="figures/filepath-no2.png" alt="An example of a directory structure that does not work with gradetools. A directory with two sub-directories labeled 'final-project-CatalinaMedina' and 'final-project-federicazoe'. The first contains a file called 'README.md' and a folder called 'proposal' which contains a file called 'proposal.Rmd'. The second directory contains two files 'proposal.Rmd' and 'README.md'"  style="width:80%">
+    <img src="figures/subfolders-no.jpg" alt="An example of a directory structure that does not work with gradetools. A directory named 'week09' with three sub-directories labeled 'week09-mdogucu-quiz', 'week09-federicazoe' and 'week09-CatalinaMedina', each containing a file named 'quiz-09a-lin-reg.Rmd'."  style="width:80%">
   </div>
 </div>
 
 ---
 
-class: middle, center
+class: middle
 
 
 ## Three example arguments
@@ -593,6 +597,35 @@ class: hide-count, middle
 --
 
 .pull-right[
+### Rubric item types:
+
+- question/component
+- all_questions
+- general_feedback
+
+]
+
+---
+
+
+class: hide-count, middle
+
+.pull-left[
+### Rubric column headers:
+
+- name
+- total_points
+- prompt_code (entered by user)
+- prompt_message (displayed to user)
+- feedback (displayed to student)
+- points_to_remove or points_to_add
+
+]
+
+.pull-right[
+
+Use function .emph[create_rubric_template()]
+
 ### Rubric item types:
 
 - question/component
@@ -831,17 +864,21 @@ class: middle
 
 ## RESOURCES
 
-https://github.com/federicazoe/gradetools
+Package website: https://federicazoe.github.io/gradetools/
 
-https://federicazoe.github.io/gradetools/articles/
+Tutorials: 
 
-- [How to grade with gradetools](https://federicazoe.github.io/gradetools/articles/a-grading-with-gradetools.html)
-- [How to regrade assignments with gradetools](https://federicazoe.github.io/gradetools/articles/b-regrading-with-gradetools.html)
-- [Extended gradetools capability: Team Grading](https://federicazoe.github.io/gradetools/articles/c-extended-capability-teams.html)
-- [Extended gradetools capability: Assignments on GitHub](https://federicazoe.github.io/gradetools/articles/d-extended-capability-github.html)
-- [Comprehensive example of grading with gradetools](https://federicazoe.github.io/gradetools/articles/e-comprehensive-example.html)
+  - How to grade with gradetools [`r fontawesome::fa(name = "link")`](https://federicazoe.github.io/gradetools/articles/a-grading-with-gradetools.html)
 
-<!-- mention CRAN-->
+  - How to regrade assignments with gradetools [`r fontawesome::fa(name = "link")`](https://federicazoe.github.io/gradetools/articles/b-regrading-with-gradetools.html)
+  
+  - Extended gradetools capability: Team Grading [`r fontawesome::fa(name = "link")`](https://federicazoe.github.io/gradetools/articles/c-extended-capability-teams.html)
+  
+  - Extended gradetools capability: Assignments on GitHub [`r fontawesome::fa(name = "link")`](https://federicazoe.github.io/gradetools/articles/d-extended-capability-github.html)
+  
+  - Comprehensive example of grading with gradetools [`r fontawesome::fa(name = "link")`](https://federicazoe.github.io/gradetools/articles/e-comprehensive-example.html)
+
+Package code: https://github.com/federicazoe/gradetools
 
 ---
 
