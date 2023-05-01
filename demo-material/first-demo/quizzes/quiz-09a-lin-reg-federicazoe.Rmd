@@ -1,0 +1,70 @@
+---
+title: "Linear Regression Quiz"
+author: "Federica Zoe"
+output: html_document
+---
+
+```{r message = FALSE}
+library(tidyverse)
+library(broom)
+student <- read.csv("https://www.openintro.org/data/csv/satgpa.csv")
+```
+
+You will see multiple choice questions in this quiz. You can answer by making the correct choice bold or simply writing the correct answer.
+
+## Question 1
+
+Consider the simple linear regression equation:
+$$y_i = \beta_0 + \beta_1 x_i + \epsilon_i$$
+
+Provide the interpretation of $\beta_1$.
+
+$\beta_1$ is the expected change in the response for a one unit increase in the explanatory variable.
+
+## Question 2
+
+You will see that you are provided with a data frame called `student`. In this data frame, we will first work on the relationship between first-year college GPA (`fy_gpa`) and high school GPA (`hs_gpa`).
+
+Plot the relationship between the two variables. Remember that the explanatory variable should be on the x axis.
+
+```{r, fig.height=3, fig.width=4}
+ggplot(student, aes(x = hs_gpa, y = fy_gpa)) +
+  geom_point() +
+  theme_bw() +
+  ylab("First-year college GPA") +
+  xlab("High school GPA")
+```
+
+## Question 3
+
+Fit a linear regression model predicting first-year college GPA with high school GPA.  Make sure to name your model `model_gpa`.  
+
+```{r}
+model_gpa <- lm(fy_gpa ~ hs_gpa, data = student)
+```
+
+### Question 3.a  
+
+List the simple linear regression model assumptions and check them to determine if any appear to be violated for this model. Skip the independence assumption since we do not know where this data came from. Provide evidence for your conclusions.
+
+The assumptions for simple linear regression are a linear relationship between the response and explanatory variables, constant variance of the residuals, and normally distributed residuals, in addition to the independence between observations assumption. 
+
+The scatter plot from question 2 shows a slight linear relationship between the variables, with a high variance. 
+
+```{r, fig.height=3, fig.width=4}
+plot(model_gpa, 1)
+```
+
+The plot of the fitted values versus the residuals does not show any obvious non constant variance. 
+
+```{r, fig.height=3, fig.width=4}
+plot(model_gpa, 2)
+```
+
+The Normal Q-Q plot shows a deviance from linearity in the tails. There are more standardized residuals outside of the range of (-3, 3) than would be expected if they were normally distributed.
+
+#### Question 3.b
+
+Assume all model assumptions hold. What is the estimate of the slope? Provide an interpretation of the slope in context.  
+
+The slope was estimated to be `r round(model_gpa$coefficients["hs_gpa"], 2)`. This means for people with high school GPA differing by one point, we estimate those with the higher GPA to have a first-year college GPA `r round(model_gpa$coefficients["hs_gpa"], 2)` points higher, on average.

@@ -1,0 +1,21 @@
+name,total_points,prompt_code,prompt_message,feedback,points_to_remove
+Question 1,2,1b,Completely incorrect,$\beta_1$ is the expected change in the response for a one unit increase in the explanatory variable.,2
+Question 1,NA,1c,Didn't mention difference in x,This is the expected change in the response for a difference in the explanatory value of one unit.,1
+Question 2,2,1a,X and Y switched,The explanatory variable is the high school gpa and the response is the first-year college gpa.,0.75
+Question 2,NA,1b,No axis labels,There are no axis labels on the plot so it is unclear what is plotted.,0.25
+Question 2,NA,1d,Incorrect plot type,The response and explanatory variables are both quantitative variables so a scatterplot is the appropriate plot to show their relationship.,1
+Question 3,2,1a,X and Y switched,The explanatory variable is the high school gpa and the response is the first-year college gpa. So the model formula would be specified as: fy_gpa ~ hs_gpa,1
+Question 3,NA,1b,Model not save correctly,"The quiz asks that the model be saved as ""model_h"".",0.5
+Question 3.a,3,1a,Missed linearity,Simple linear regression assumes a linear relationship between the explanatory and response variables.,0.5
+Question 3.a,NA,1b,Missed constant variance,Simple linear regression assumes that the variance of the residuals is constant for all values of the explanatory variable.,0.5
+Question 3.a,NA,1c,Missed normality,Simple linear regression assumes the residuals are normally distributed.,0.5
+Question 3.a,NA,2,Conclusions not fully supported,Your conclusions were not fully supported. For each conclusion there should be a refernce to evidence.,0.75
+Question 3.a,NA,3,Did not support conclusions at all,Evidence was not provided to support your conclusions.,1.5
+Question 3.b,3,1,Incorrect value identified as slope,The slope of the regression is 0.74314. This can be obtained from the coefficients table from the regression summary.,1
+Question 3.b,NA,2,Causal interpretation,"Be careful, we cannot make a causal conclusion here. A correct interpretation of the slope would be: For people with high school GPA differing by one point, we estimate those with the higher GPA to have a first-year college GPA 0.74 points higher, on average.",1
+Question 3.b,3,1a,No slope identified,The slope of the regression was not identified.,1
+Question 3.b,3,2a,Interpreation not in context,The interpretation was not in the context of this problem. When summarizing findings we want to avoid statistical jargon and present the analysis findings in context.,1
+all_questions,NA,0,Correct,You're answer is correct!,0
+all_questions,NA,404,Answer missing,No answer was provided for this question.,100
+general_feedback,NA,0,Great job on the quiz!,Great job on the quiz! You have a great understanding of the material.,NA
+general_feedback,NA,2,Don't just print output,Please make sure to not just print r output. As statisticians we should convey our findings as clearly as possible.,NA
